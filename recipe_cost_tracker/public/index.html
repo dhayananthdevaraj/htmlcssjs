@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Cost Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Recipe Cost Calculator</h1>
+        <div class="input-section">
+            <input type="text" id="ingredientName" placeholder="Ingredient name...">
+            <input type="number" id="ingredientQuantity" placeholder="Quantity (in units)">
+            <input type="number" id="ingredientCost" placeholder="Cost per unit">
+            <button onclick="addIngredient()">Add Ingredient</button>
+        </div>
+        <table id="ingredientTable">
+            <thead>
+                <tr>
+                    <th>Ingredient Name</th>
+                    <th>Quantity</th>
+                    <th>Cost per Unit</th>
+                    <th>Total Cost</th>
+                </tr>
+            </thead>
+            <tbody id="ingredientTableBody"></tbody>
+        </table>
+        <div>
+            <p>Total Recipe Cost:</p>
+            <p id="totalCost">$0.00</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
