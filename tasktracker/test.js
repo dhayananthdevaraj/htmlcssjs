@@ -23,30 +23,7 @@ const puppeteer = require('puppeteer');
       console.log('TESTCASE:verify_h1_element:failure');
     }
 
-    // const page1 = await browser.newPage();
-    // try {
-    //   await page1.goto('https://8081-abfdabeabcbaedbfedabcebcbdedcbbadbfd.premiumproject.examly.io');
-    //   await page1.setViewport({
-    //     width: 1200,
-    //     height: 800,
-    //   });
-
-    //   // Wait for the p tag to appear
-    //   await page1.waitForSelector('p', { timeout: 2000 });
-
-    //   const result1 = await page1.evaluate(() => {
-    //     let pElement = document.querySelector('p#totalSavings');
-    //     return pElement !== null;
-    //   });
-
-    //   if (result1) {
-    //     console.log('TESTCASE:verify_paragraph_tag_id:success');
-    //   } else {
-    //     console.log('TESTCASE:verify_paragraph_tag_id:failure');
-    //   }
-    // } catch (e) {
-    //   console.log('TESTCASE:verify_paragraph_tag_id:failure');
-    // }
+  
     
   const page3 = await browser.newPage();
   try{
@@ -132,7 +109,6 @@ const puppeteer = require('puppeteer');
       console.log('TESTCASE:add_goal_and_display_check:failure');
     }
   } catch (error) {
-    console.log(error);
     console.log('TESTCASE:add_goal_and_display_check:failure');
   }
 
