@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Savings Goal Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Savings Goal Tracker</h1>
+        <div class="input-section">
+            <input type="text" id="goalName" placeholder="Goal name...">
+            <input type="number" id="goalAmount" placeholder="Goal amount...">
+            <button onclick="addGoal()">Add Goal</button>
+        </div>
+        <table id="goalTable">
+            <thead>
+                <tr>
+                    <th>Goal Name</th>
+                    <th>Goal Amount</th>
+                    <!-- <th>Action</th> -->
+                </tr>
+            </thead>
+            <tbody id="goalTableBody"></tbody>
+        </table>
+        <div>
+            <p>Total Savings Goal:</p>
+            <p id="totalSavings">$0</p>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
