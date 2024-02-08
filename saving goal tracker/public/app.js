@@ -16,10 +16,10 @@ function addGoal() {
         // const cellAction = newRow.insertCell(2);
 
         cellName.textContent = goalName.value || 'Unnamed Goal';
-        cellAmount.textContent = `$${goalAmountValue.toFixed(2)}`;
+        cellAmount.textContent = `₹${goalAmountValue.toFixed(2)}`;
         // cellAction.innerHTML = `<button onclick="removeGoal(this, ${goalAmountValue})">Remove</button>`;
 
-        totalSavingsElement.textContent = `$${totalSavings.toFixed(2)}`;
+        totalSavingsElement.textContent = `₹${totalSavings.toFixed(2)}`;
         goalName.value = ''; // Clear the goal name input
         goalAmount.value = ''; // Clear the goal amount input
     }
