@@ -23,30 +23,30 @@ const puppeteer = require('puppeteer');
       console.log('TESTCASE:verify_h1_element:failure');
     }
 
-    const page1 = await browser.newPage();
-    try {
-      await page1.goto('https://8081-abfdabeabcbaedbfedabcebcbdedcbbadbfd.premiumproject.examly.io');
-      await page1.setViewport({
-        width: 1200,
-        height: 800,
-      });
+    // const page1 = await browser.newPage();
+    // try {
+    //   await page1.goto('https://8081-abfdabeabcbaedbfedabcebcbdedcbbadbfd.premiumproject.examly.io');
+    //   await page1.setViewport({
+    //     width: 1200,
+    //     height: 800,
+    //   });
 
-      // Wait for the p tag to appear
-      await page1.waitForSelector('p', { timeout: 2000 });
+    //   // Wait for the p tag to appear
+    //   await page1.waitForSelector('p', { timeout: 2000 });
 
-      const result1 = await page1.evaluate(() => {
-        let pElement = document.querySelector('p#totalSavings');
-        return pElement !== null;
-      });
+    //   const result1 = await page1.evaluate(() => {
+    //     let pElement = document.querySelector('p#totalSavings');
+    //     return pElement !== null;
+    //   });
 
-      if (result1) {
-        console.log('TESTCASE:verify_paragraph_tag_id:success');
-      } else {
-        console.log('TESTCASE:verify_paragraph_tag_id:failure');
-      }
-    } catch (e) {
-      console.log('TESTCASE:verify_paragraph_tag_id:failure');
-    }
+    //   if (result1) {
+    //     console.log('TESTCASE:verify_paragraph_tag_id:success');
+    //   } else {
+    //     console.log('TESTCASE:verify_paragraph_tag_id:failure');
+    //   }
+    // } catch (e) {
+    //   console.log('TESTCASE:verify_paragraph_tag_id:failure');
+    // }
     
   const page3 = await browser.newPage();
   try{
@@ -111,24 +111,22 @@ const puppeteer = require('puppeteer');
     });
 
     // Wait for the input fields to appear
-    await page6.waitForSelector('#goalName', {timeout: 2000});
-    await page6.waitForSelector('#goalAmount', {timeout: 2000});
+    await page6.waitForSelector('#taskName', {timeout: 2000});
+  
 
     // Type in the expense description and amount
-    await page6.type('#goalName', 'Test Goal');
-    await page6.type('#goalAmount', '100');
-
+    await page6.type('#taskName', 'Test Task');
+ 
     // Click the "Add Expense" button
     await page6.click('button');
 
     // Wait for the expense to be added to the table
-    await page6.waitForSelector('#goalTableBody tr', {timeout: 2000});
+    await page6.waitForSelector('#taskTableBody tr', {timeout: 2000});
 
     // Check if the added expense's description and amount match the expected values
-    const addedgoalName = await page6.$eval('#goalTableBody', el => el.textContent.trim());
-    const addedgoalAmount = await page6.$eval('#goalTableBody', el => el.textContent.trim());
+    const addedtaskName = await page6.$eval('#taskTableBody', el => el.textContent.trim());
   
-    if (addedgoalName.includes('Test Goal') && addedgoalAmount.includes('100')) {
+    if (addedtaskName.includes('Test Task')) {
       console.log('TESTCASE:add_goal_and_display_check:success');
     } else {
       console.log('TESTCASE:add_goal_and_display_check:failure');
@@ -143,7 +141,7 @@ const puppeteer = require('puppeteer');
   try {
     await page8.goto('https://8081-abfdabeabcbaedbfedabcebcbdedcbbadbfd.premiumproject.examly.io');
     const buttonColor = await page.evaluate(() => window.getComputedStyle(document.querySelector('button')).backgroundColor);
-    if (buttonColor === 'rgb(53, 140, 164)') {
+    if (buttonColor === 'rgb(76, 175, 80)') {
       console.log('TESTCASE:validate_button_background_color:success');
     } else {
       console.log('TESTCASE:validate_button_background_color:failure');
@@ -211,7 +209,6 @@ const puppeteer = require('puppeteer');
 
   finally{
     await page.close();
-    await page1.close();
     await page3.close();
     await page4.close();
     await page5.close();
