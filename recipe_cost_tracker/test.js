@@ -143,7 +143,7 @@ const puppeteer = require('puppeteer');
   try {
     await page8.goto('https://8081-abfdabeabcbaedbfedabcebcbdedcbbadbfd.premiumproject.examly.io');
     const buttonColor = await page.evaluate(() => window.getComputedStyle(document.querySelector('button')).backgroundColor);
-    if (buttonColor === 'rgb(53, 140, 164)') {
+    if (buttonColor === 'rgb(76, 175, 80)') {
       console.log('TESTCASE:validate_button_background_color:success');
     } else {
       console.log('TESTCASE:validate_button_background_color:failure');
@@ -163,7 +163,7 @@ const puppeteer = require('puppeteer');
       await page9.waitForSelector('button',{timeout : 2000});
       const onclickValue = await page9.$eval('button', el => el.getAttribute('onclick'));
      
-      if(onclickValue == "addGoal()"){
+      if(onclickValue == "addIngredient()"){
         console.log('TESTCASE:button_tag_has_correct_onclick:success');
       }
       else{
