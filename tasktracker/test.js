@@ -161,7 +161,7 @@ const puppeteer = require('puppeteer');
       await page9.waitForSelector('button',{timeout : 2000});
       const onclickValue = await page9.$eval('button', el => el.getAttribute('onclick'));
      
-      if(onclickValue == "addGoal()"){
+      if(onclickValue == "addTask()"){
         console.log('TESTCASE:button_tag_has_correct_onclick:success');
       }
       else{
