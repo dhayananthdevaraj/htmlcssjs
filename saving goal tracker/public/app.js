@@ -18,19 +18,10 @@ function addGoal() {
         cellName.textContent = goalName.value || 'Unnamed Goal';
         cellAmount.textContent = `₹${goalAmountValue.toFixed(2)}`;
         // cellAction.innerHTML = `<button onclick="removeGoal(this, ${goalAmountValue})">Remove</button>`;
+        totalSavingsElement.textContent = `Total Savings Goal: ₹${totalSavings.toFixed(2)}`;
 
-        totalSavingsElement.textContent = `₹${totalSavings.toFixed(2)}`;
         goalName.value = ''; // Clear the goal name input
         goalAmount.value = ''; // Clear the goal amount input
     }
 }
 
-// function removeGoal(button, goalAmountValue) {
-//     const rowToRemove = button.parentNode.parentNode;
-//     const goalTableBody = document.getElementById('goalTableBody');
-//     goalTableBody.removeChild(rowToRemove);
-
-//     totalSavings -= goalAmountValue;
-//     const totalSavingsElement = document.getElementById('totalSavings');
-//     totalSavingsElement.textContent = `$${totalSavings.toFixed(2)}`;
-// }

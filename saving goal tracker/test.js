@@ -134,7 +134,6 @@ const puppeteer = require('puppeteer');
       console.log('TESTCASE:add_goal_and_display_check:failure');
     }
   } catch (error) {
-    console.log(error);
     console.log('TESTCASE:add_goal_and_display_check:failure');
   }
 

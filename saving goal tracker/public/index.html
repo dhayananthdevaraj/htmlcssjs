@@ -11,11 +11,9 @@
 <body>
     <div class="container">
         <h1>Savings Goal Tracker</h1>
-        <div class="input-section">
             <input type="text" id="goalName" placeholder="Goal name...">
             <input type="number" id="goalAmount" placeholder="Goal amount...">
             <button onclick="addGoal()">Add Goal</button>
-        </div>
         <table id="goalTable">
             <thead>
                 <tr>
@@ -27,8 +25,7 @@
             <tbody id="goalTableBody"></tbody>
         </table>
         <div>
-            <p>Total Savings Goal:</p>
-            <p id="totalSavings">₹0</p>
+                <p id="totalSavings">Total Savings Goal: ₹0</p>
         </div>
     </div>
 
